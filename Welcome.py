@@ -28,8 +28,7 @@ if input_name != "" and input_text !="":
 
     if button:
         st.write(input_text)
-        st.success('Your comment has been submitted, Thank you!', icon="✅")
-        st.balloons()
+        st.success(f'{input_name} your comment has been submitted, Thank you!', icon="✅")
 
 
 st.divider()
