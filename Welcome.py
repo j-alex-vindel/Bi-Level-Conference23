@@ -18,12 +18,12 @@ st.divider()
 st.markdown("""
 #### Leave a Comment
   """)
-input_name = st.text_input('Name')
+input_name = st.text_input('Name',"")
 input_mail = st.text_input('Mail (optional)')
-input_text = st.text_area('Enter text')
+input_text = st.text_area('Enter text',"")
 st.caption('Comments will be saved and checked')
 
-if input_name is not None and input_text is not None:
+if input_name != "" and input_text !="":
     button = st.button('Submit')
 
 if button:
