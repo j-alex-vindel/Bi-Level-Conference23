@@ -8,7 +8,7 @@ st.markdown("""
             ## I am pleased you've decided to scan my QR code. In this page you will find extra information about the topic and poster.
             Please use the pages on left of the screen to navigate or follow the links below. I'd be thrilled if you leave comments and/or feddbacks.
 
-            ### Information About Poster
+            ### About the Poster
             - View the poster by simply clicking the page 'Poster' or [click here](https://j-alex-vindel-bi-level-conference23.streamlit.app/Poster)
             - Check out a quick explanation video at the 'Video' page or [here](https://j-alex-vindel-bi-level-conference23.streamlit.app/Video)
             
@@ -27,7 +27,10 @@ if input_name != "" and input_text !="":
     button = st.button('Submit')
 
     if button:
-        st.write(input_text)
+        with open('pages/CF/comments.txt','a') as output:
+            output.write(f'>> Name: {input_name}\n')
+            output.write(f">> Mail: {input_mail}\n")
+            output.write(f"{input_text}")
         st.success(f'{input_name} your comment has been submitted, Thank you!', icon="✅")
 
 
