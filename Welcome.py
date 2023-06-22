@@ -25,6 +25,7 @@ st.caption('Comments will be saved and checked')
 
 if st.button('Submit'):
     st.write(input_text)
+    st.success('This is a success message!', icon="✅")
 
 
 
