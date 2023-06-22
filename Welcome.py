@@ -26,10 +26,10 @@ st.caption('Comments will be saved and checked')
 if input_name != "" and input_text !="":
     button = st.button('Submit')
 
-if button:
-    st.write(input_text)
-    st.success('Your comment has been submitted, Thank you!', icon="✅")
-    st.balloons()
+    if button:
+        st.write(input_text)
+        st.success('Your comment has been submitted, Thank you!', icon="✅")
+        st.balloons()
 
 
 st.divider()
