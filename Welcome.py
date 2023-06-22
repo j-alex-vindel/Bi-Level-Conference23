@@ -11,7 +11,7 @@ def load_data(sheets_url):
 
 df = load_data(st.secrets["public_gsheets_url"])
 
-
+st.write(df.columns())
 st.title('Welcome to More Information')
 
 st.sidebar.success("Select a page to visit")
