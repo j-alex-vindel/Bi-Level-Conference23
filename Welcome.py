@@ -21,10 +21,10 @@ st.markdown("""
 
 st.divider()
 st.markdown("""
-#### Leave a Comment - click the button
+#### Leave a Comment
   """)
-
+input_name = st.text_input('Name')
 input_text = st.text_area('Enter text')
-
-if st.button('Leave a Comment'):
+st.caption('Comments will be saved and checked')
+if st.button('Submit'):
     st.write(input_text)
