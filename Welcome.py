@@ -26,10 +26,12 @@ st.caption('Comments will be saved and checked')
 if st.button('Submit'):
     st.write(input_text)
 
-st.divider()
 
+
+st.divider()
 st.markdown("""
-     #### Want to know more aboute me?
+           ### Want to know more aboute me?
+
             - Profile and social media links [Click Me](https://j-alex-vindel-bi-level-conference23.streamlit.app/About_Me)
 
-""")
+            """)
