@@ -12,14 +12,14 @@ col1,col2 = st.columns(2,gap='medium')
 
 with col1:
     
-    linkedin = Image.open('pages/Pics/linkedin.PNG')
+    linkedin = Image.open('pages/Pics/linkedin.png')
 
     st.image(linkedin,caption='LinkedIn',output_format='PNG')
     st.markdown('## [**alexander-vindel**](https://www.linkedin.com/in/alexander-vindel/)')
 
 with col2:
     
-    github = Image.open('pages/Pics/github.PNG')
+    github = Image.open('pages/Pics/github.png')
 
     st.image(github,caption='Github',output_format='PNG')
     st.markdown('## [**j-alex-vindel**](https://github.com/j-alex-vindel)')
