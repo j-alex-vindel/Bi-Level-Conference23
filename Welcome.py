@@ -1,17 +1,25 @@
 import streamlit as st
 from datetime import datetime
 import pandas as pd
+from gspread_pandas import Spread,Client
+from google.oauth2 import service_account
 
 
+scope = [
+'https://www.googleapis.com/auth/spreadsheets',
+'https://www.googleapis.com/auth/drive'
+]
 
-@st.cache_data(ttl=600)
-def load_data(sheets_url):
-    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
-    return pd.read_csv(csv_url)
+credentials = service_account.Credentials.from_service_account_info(
+                st.secrets["gcp_service_account"], scopes = scope)
 
-df = load_data(st.secrets["public_gsheets_url"])
 
-st.write(df.columns)
+client = Client(scope=scope,creds=credentials)
+spreadsheetname = "Comments"
+spread = Spread(spreadsheetname,client = client)
+
+st.write(spread.url)
+
 st.title('Welcome to More Information')
 
 st.sidebar.success("Select a page to visit")
@@ -43,8 +51,8 @@ if input_name != "" and input_text !="":
                'Mail':[input_mail],
                'Time':[datetime.now()],
                'Comment':[input_text]}
-        opt_df = pd.DataFrame.from_dict(opt)
-        newdf = df.append(opt_df,ignore_index=True)
+        # opt_df = pd.DataFrame.from_dict(opt)
+        # newdf = df.append(opt_df,ignore_index=True)
         st.success(f'{input_name} your comment has been submitted, Thank you!', icon="✅")
 
 
