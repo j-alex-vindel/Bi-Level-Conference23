@@ -18,7 +18,18 @@ client = Client(scope=scope,creds=credentials)
 spreadsheetname = "Comments"
 spread = Spread(spreadsheetname,client = client)
 
-st.write(spread.url)
+sh = client.open(spreadsheetname)
+
+def load_spreadsheet(spreadsheetname):
+    worksheet = sh.worksheet(spreadsheetname)
+    df = pd.DataFrame(worksheet.get_all_records())
+    return df
+
+def update_spreadsheet(spreadsheetname,dataframe):
+    col = ['Name','Email','Time','Comment']
+    spread.df_to_sheet(dataframe[col],sheet=spreadsheetname,index=False)
+    st.sidebar.info('Comment Submmitted!')
+
 
 st.title('Welcome to More Information')
 
@@ -43,18 +54,26 @@ input_mail = st.text_input('Mail (optional)')
 input_text = st.text_area('Enter text',"")
 st.caption('Comments will be saved and checked')
 
-if input_name != "" and input_text !="":
-    button = st.button('Submit')
+button = st.button('Submit')
 
-    if button:
-        opt = {'Name':[input_name],
-               'Mail':[input_mail],
-               'Time':[datetime.now()],
-               'Comment':[input_text]}
-        # opt_df = pd.DataFrame.from_dict(opt)
-        # newdf = df.append(opt_df,ignore_index=True)
+if button:
+    opt = {'Name':[input_name],
+            'Email':[input_mail],
+            'Time':[datetime.now()],
+            'Comment':[input_text]}
+    opt_df = pd.DataFrame(opt)
+    df = load_spreadsheet('Coms')
+    newdf = df.append(opt_df,ignore_index=True)
+    
+    if opt['Name'][0] != '':
+        update_spreadsheet('Coms',newdf)
         st.success(f'{input_name} your comment has been submitted, Thank you!', icon="✅")
-
+    else:
+        st.error('Please add a name', icon="🚨")
+else:
+    st.markdown("""
+    #### To Submit add name and comment
+    """)
 
 st.divider()
 st.markdown("""
