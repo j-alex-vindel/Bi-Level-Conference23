@@ -67,7 +67,7 @@ if button:
     
     if opt['Name'][0] != '':
         update_spreadsheet('Coms',newdf)
-        st.success(f'{input_name} your comment has been submitted, Thank you!', icon="✅")
+        st.success(f'{input_name} your comment has been recorded, Thank you!', icon="✅")
     else:
         st.error('Please add a name', icon="🚨")
 else:
