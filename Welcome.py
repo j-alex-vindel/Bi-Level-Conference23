@@ -23,8 +23,11 @@ input_mail = st.text_input('Mail (optional)')
 input_text = st.text_area('Enter text')
 st.caption('Comments will be saved and checked')
 
-if st.button('Submit'):
-    st.write(input_text)
+
+button = st.button('Submit')
+
+if button:
+    input_text
     st.success('Your comment has been submitted, Thank you!', icon="✅")
     st.balloons()
 
