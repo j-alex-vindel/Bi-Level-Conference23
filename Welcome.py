@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import datetime
 import pandas as pd
-from gspread_pandas import Spread,Client
+
 
 
 @st.cache_data(ttl=600)
