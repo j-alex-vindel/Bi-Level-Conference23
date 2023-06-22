@@ -1,4 +1,16 @@
 import streamlit as st
+from datetime import datetime
+import pandas as pd
+from gspread_pandas import Spread,Client
+
+
+@st.cache_data(ttl=600)
+def load_data(sheets_url):
+    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+    return pd.read_csv(csv_url)
+
+df = load_data(st.secrets["public_gsheets_url"])
+
 
 st.title('Welcome to More Information')
 
@@ -27,10 +39,12 @@ if input_name != "" and input_text !="":
     button = st.button('Submit')
 
     if button:
-        with open('pages/CF/comments.txt','a') as output:
-            output.write(f'>> Name: {input_name}\n')
-            output.write(f">> Mail: {input_mail}\n")
-            output.write(f"{input_text}")
+        opt = {'Name':[input_name],
+               'Mail':[input_mail],
+               'Time':[datetime.now()],
+               'Comment':[input_text]}
+        opt_df = pd.DataFrame.from_dict(opt)
+        newdf = df.append(opt_df,ignore_index=True)
         st.success(f'{input_name} your comment has been submitted, Thank you!', icon="✅")
 
 
