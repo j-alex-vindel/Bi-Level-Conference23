@@ -4,6 +4,9 @@ st.markdown("""
             ## :blue[Video] 
             """)
 
+videofile = open('pages/Pics/video.mp4','rb')
+video_bytes = videofile.read()
+st.video(video_bytes)
 
 
 
