@@ -40,8 +40,8 @@ st.markdown("""
             Please use the pages on left of the screen to navigate or follow the links below. I'd be thrilled if you leave comments and/or feddbacks.
 
             ### About the Poster
-            - #### :frame_with_picture: View the poster by simply clicking the page 'Poster' or [click here](https://j-alex-vindel-bi-level-conference23.streamlit.app/Poster)
-            - #### :film_frames: Check out a quick explanation video at the 'Video' page or [here](https://j-alex-vindel-bi-level-conference23.streamlit.app/Video)
+            - #### :frame_with_picture: [Check out the Poster](https://j-alex-vindel-bi-level-conference23.streamlit.app/Poster)
+            - #### :film_frames: [Watch an explanation video](https://j-alex-vindel-bi-level-conference23.streamlit.app/Video)
             
             """)
 
@@ -81,6 +81,6 @@ st.divider()
 st.markdown("""
            ### Want to know more aboute me?
 
-            - #### :bust_in_silhouette: Profile and social media links [Click Me](https://j-alex-vindel-bi-level-conference23.streamlit.app/About_Me)
+            - #### :bust_in_silhouette: [Profile and social media links](https://j-alex-vindel-bi-level-conference23.streamlit.app/About_Me)
 
             """)
