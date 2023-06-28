@@ -6,7 +6,7 @@ st.markdown("""
             ## :purple[Poster] 
             """)
 
-image = Image.open('pages/Pics/poster_dsms2023.jpg')
+image = Image.open('pages/Pics/poster_ICBO23.jpg')
 
 st.image(image,caption='Poster')
 
