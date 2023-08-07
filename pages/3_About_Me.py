@@ -6,6 +6,8 @@ st.markdown("""
             ## :blue[About Me] 
             """)
 
+persona = Image.open('pages/Pics/profile.jpg')
+st.image(persona,caption='Somewhere in Scotland',width=220)
 st.markdown("""
             - #### 👋 Hi, I’m Alexander Vindel a PhD student at Strathclyde University in the Business School in the Management Science Department
             - #### 👀 My research interests are in mathematical optimization, linear programming, integer programming, network optimization, bi-level programming and data analytics
