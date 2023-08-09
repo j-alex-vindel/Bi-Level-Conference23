@@ -37,7 +37,7 @@ st.title('Welcome to More Information')
 
 st.markdown("""    
             ## I am pleased you've decided to scan my QR code. In this page you will find extra information about the topic and poster.
-            Please use the pages on left of the screen to navigate or follow the links below. I'd be thrilled if you leave comments and/or feddbacks.
+            Please use the pages on left of the screen to navigate or follow the links below. I'd be thrilled if you leave comments and/or feedbacks.
 
             ### About the Poster
             - #### :frame_with_picture: [Check out the Poster](https://j-alex-vindel-bi-level-conference23.streamlit.app/Poster)
