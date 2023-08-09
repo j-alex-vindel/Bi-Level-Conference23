@@ -26,7 +26,7 @@ def load_spreadsheet(spreadsheetname):
     return df
 
 def update_spreadsheet(spreadsheetname,dataframe):
-    col = ['Name','Email','Time','Comment']
+    col = ['Name','Email','Time','Section','Comment']
     spread.df_to_sheet(dataframe[col],sheet=spreadsheetname,index=False)
     st.sidebar.info('Comment Submmitted!')
 
@@ -62,6 +62,7 @@ if button:
     opt = {'Name':[input_name],
             'Email':[input_mail],
             'Time':[datetime.now()],
+            'Section':['Welcome'],
             'Comment':[input_text]}
     opt_df = pd.DataFrame(opt)
     df = load_spreadsheet('Coms')

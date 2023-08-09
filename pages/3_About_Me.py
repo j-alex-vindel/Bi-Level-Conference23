@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 
 
+
+
 st.markdown("""
             ## :blue[About Me] 
             """)
