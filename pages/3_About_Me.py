@@ -14,9 +14,8 @@ st.markdown("""
             - #### 👋 Hi, I’m Alexander Vindel a PhD student at Strathclyde University in the Business School in the Management Science Department
             - #### 👀 My research interests are in mathematical optimization, linear programming, integer programming, network optimization, bi-level programming and data analytics
             - #### 🌱 I mostly work with Python and Gurobi
-            - #### :bulb: I’d be interested in collaborating on integer programming and operations research as a whole
+            - #### :bulb: I’d be interested in collaborating on integer programming, bilevel optimization and operations research as a whole
             - #### 📫 Reach me by email at (jose.vindel-garduno@strath.ac.uk) | (alexander.vindel@gmail.com) or check my social networks below
-
             """)
 
 
