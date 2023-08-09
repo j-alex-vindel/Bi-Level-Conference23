@@ -36,7 +36,7 @@ st.title('Welcome to More Information')
 
 
 st.markdown("""    
-            ## I am pleased you've decided to scan my QR code or visit the link. In this page you will find extra information about the topic and poster presented at ICBO23.
+            ## I am pleased you've decided to scan my QR code or clicked the link. In this page you will find extra information about the topic and poster presented at ICBO23.
             Please use the pages on left of the screen to navigate or follow the links below. I'd be thrilled if you leave comments and/or feedbacks.
 
             ### About the Poster
