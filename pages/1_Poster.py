@@ -65,6 +65,15 @@ with col2:
         S_{ij} \cdot \nu_{j}=0;~\forall i \in N~ \forall j \in M\\
         \nu^{min}_{j} \cdot y_{j} \leq \nu_{j} \leq \nu^{max}_{j} \cdot y_{j};~\forall j \in M\\
          ''')
+st.latex(r'''
+         S = Stoichiometry~ matrix\\
+         M = set~ of~ arcs~ (reactions)\\
+         N = set~ of~ nodes~ (genes)\\
+         ''')
+
+
+
+
 
 
 st.divider()
